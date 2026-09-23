@@ -1,21 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For You ❤️</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
-    <h1>For My Love ❤️</h1>
-    <div class="heart-box">
-      <div id="heart"></div>
+
+<div id="particles"></div>
+
+<audio id="song" loop>
+  <source src="let me love.mp3" type="audio/mpeg">
+</audio>
+
+<section class="screen active" id="screen1">
+  <div class="glow-heart" onclick="startLove()">❤️</div>
+  <h1>Hey My Love...</h1>
+  <p>Tap the heart ❤️</p>
+</section>
+
+<section class="screen" id="screen2">
+  <div class="glass">
+    <div class="big-heart">💗</div>
+    <h1>Do you love me?</h1>
+    <p>Be honest... my heart is waiting 🥺</p>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">YES ❤️</button>
+      <button class="no" id="noBtn" onclick="runAway()">NO 😜</button>
     </div>
-    <p class="message">Every beat of my heart says...</p>
-    <div class="big-love">I LOVE YOU ❤️</div>
-    <button onclick="createHearts()">Tap me 💕</button>
   </div>
-  <script src="script.js"></script>
+</section>
+
+<section class="screen" id="screen3">
+  <div class="glass">
+    <h1 class="type" id="typeText"></h1>
+    <p>You just made my whole world brighter. ✨</p>
+    <button onclick="next(4)">Continue 💕</button>
+  </div>
+</section>
+
+<section class="screen" id="screen4">
+  <div class="glass">
+    <h1>For You ❤️</h1>
+    <div class="photo-wrap">
+      <img id="memory" src="1.jpeg" alt="Our memory">
+    </div>
+    <div id="dots"></div>
+    <p id="caption">A beautiful memory...</p>
+    <button onclick="next(5)">Keep going 🌹</button>
+  </div>
+</section>
+
+<section class="screen" id="screen5">
+  <div class="glass">
+    <div class="music-note">🎵</div>
+    <h1>Let Me Love You</h1>
+    <p>Our little song starts here...</p>
+    <button onclick="playSong(); next(6)">Play Our Song ❤️</button>
+  </div>
+</section>
+
+<section class="screen" id="screen6">
+  <div class="glass final">
+    <div class="big-heart">💖</div>
+    <h1>I Love You</h1>
+    <p>Every picture, every memory, every moment...</p>
+    <p class="forever">I choose you. Always. ♾️❤️</p>
+    <button onclick="next(7); finalFireworks()">Read my love letter 💌</button>
+  </div>
+</section>
+
+<section class="screen" id="screen7">
+  <div class="letter-card">
+    <div class="letter-header">💌</div>
+    <h1>Naa Minnie (Janu) ki, ❤️</h1>
+    <div class="letter-text">
+      <p>Iroju nuvvu naku pampina aa digital letter, and nuvvu rasina prathi chinna maata chusina tharvata... na manasu completely aagipoindi bangaram. 🥺</p>
+      <p>Nuvvu na kosam antha time theesukuni nee feelings anni open ga rayadam... nenu life lo pondhina ultimate and most beautiful gift.</p>
+      <p>I still remember September 13th, the day we fought each other and solved our problem. Nuvvu quietly na everyday life loni oka permanent part aypoyav ani nuvvu rasav kada... kani reality entho telusa? Nuvvu na life loki vachina roju nunde na prapanchame nuvvu aypoyav. 👑✨</p>
+      <p>Nuvvu nannu nee 'comfort zone' and 'calm' ani pilichav. Nenu niku maata isthunnanu bangaram, enni years gadichina, enni vachina... nee manasulo unna prathi chinna bhayanni dooram chesi, ninnu prathi kshanam safe ga chuskovadame na ultimate responsibility. Nee kalla loni andam, nee soft hands, nee perfect shape, and anni kante ekuva nee loni aa pure heart... nannu eppudu nee meeda inka ekuva prema lo padesthune untai.</p>
+      <p>Every single day with you is a priceless gift to me, my princess. This is only the beginning mana beautiful journey ki. I love you so much, fully and permanently.</p>
+      <p class="signoff">With lots and lots of love,<br> Nee Harsha 🔐❤️🌹</p>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
